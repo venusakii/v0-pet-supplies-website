@@ -245,60 +245,62 @@ export default function ReviewsPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {displayedProducts.map((product) => (
-              <Card key={product.id} className="group hover:shadow-lg transition-all duration-300">
-                <CardHeader className="p-0">
-                  <div className="relative aspect-square bg-muted rounded-t-lg overflow-hidden">
-                    <img
-                      src={product.image || "/placeholder.svg"}
-                      alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                    />
-                    <div className="absolute top-4 left-4">
-                      <Badge variant="secondary">{product.badge}</Badge>
+              <Link key={product.id} href={`/reviews/${product.id}`} className="block">
+                <Card className="group hover:shadow-lg transition-all duration-300 cursor-pointer">
+                  <CardHeader className="p-0">
+                    <div className="relative aspect-square bg-muted rounded-t-lg overflow-hidden">
+                      <img
+                        src={product.image || "/placeholder.svg"}
+                        alt={product.name}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                      <div className="absolute top-4 left-4">
+                        <Badge variant="secondary">{product.badge}</Badge>
+                      </div>
+                      <div className="absolute top-4 right-4">
+                        <Button variant="ghost" size="sm" className="bg-white/80 hover:bg-white">
+                          <Heart className="h-4 w-4" />
+                        </Button>
+                      </div>
                     </div>
-                    <div className="absolute top-4 right-4">
-                      <Button variant="ghost" size="sm" className="bg-white/80 hover:bg-white">
-                        <Heart className="h-4 w-4" />
-                      </Button>
+                  </CardHeader>
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-2">
+                      <Badge variant="outline" className="text-xs">
+                        {product.category}
+                      </Badge>
+                      <div className="flex items-center">
+                        <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                        <span className="text-sm ml-1 font-medium">{product.rating}</span>
+                        <span className="text-xs text-muted-foreground ml-1">({product.reviews})</span>
+                      </div>
                     </div>
-                  </div>
-                </CardHeader>
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-2">
-                    <Badge variant="outline" className="text-xs">
-                      {product.category}
-                    </Badge>
-                    <div className="flex items-center">
-                      <Star className="h-4 w-4 fill-yellow-400 text-yellow-400" />
-                      <span className="text-sm ml-1 font-medium">{product.rating}</span>
-                      <span className="text-xs text-muted-foreground ml-1">({product.reviews})</span>
-                    </div>
-                  </div>
 
-                  <CardTitle className="mb-2 text-lg leading-tight">{product.name}</CardTitle>
+                    <CardTitle className="mb-2 text-lg leading-tight">{product.name}</CardTitle>
 
-                  <CardDescription className="mb-4 text-sm">{product.description}</CardDescription>
+                    <CardDescription className="mb-4 text-sm">{product.description}</CardDescription>
 
-                  <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-primary">{product.price}</span>
-                    <div className="flex gap-2">
-                      <Button size="sm" variant="outline" asChild>
-                        <Link href={`/reviews/${product.id}`}>Read Review</Link>
-                      </Button>
-                      <Button size="sm" asChild>
-                        <a
-                          href={`https://amazon.com/s?k=${encodeURIComponent(product.name)}&tag=puppystore-20`}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                        >
-                          <ExternalLink className="h-4 w-4 mr-1" />
-                          Buy
-                        </a>
-                      </Button>
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-bold text-primary">{product.price}</span>
+                      <div className="flex gap-2">
+                        <Button size="sm" variant="outline" asChild onClick={(e) => e.stopPropagation()}>
+                          <Link href={`/reviews/${product.id}`}>Read Review</Link>
+                        </Button>
+                        <Button size="sm" asChild onClick={(e) => e.stopPropagation()}>
+                          <a
+                            href={`https://amazon.com/s?k=${encodeURIComponent(product.name)}&tag=puppystore-20`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            <ExternalLink className="h-4 w-4 mr-1" />
+                            Buy
+                          </a>
+                        </Button>
+                      </div>
                     </div>
-                  </div>
-                </CardContent>
-              </Card>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
 
