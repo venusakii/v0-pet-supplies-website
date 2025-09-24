@@ -27,17 +27,17 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/categories/collars" className="text-muted-foreground hover:text-primary">
+                <Link href="/reviews?category=collars" className="text-muted-foreground hover:text-primary">
                   Collars & Leashes
                 </Link>
               </li>
               <li>
-                <Link href="/categories/toys" className="text-muted-foreground hover:text-primary">
+                <Link href="/reviews?category=toys" className="text-muted-foreground hover:text-primary">
                   Toys
                 </Link>
               </li>
               <li>
-                <Link href="/categories/accessories" className="text-muted-foreground hover:text-primary">
+                <Link href="/reviews?category=accessories" className="text-muted-foreground hover:text-primary">
                   Accessories
                 </Link>
               </li>
@@ -74,22 +74,22 @@ export function Footer() {
             <h3 className="font-semibold mb-4">Support</h3>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/help" className="text-muted-foreground hover:text-primary">
+                <Link href="/contact" className="text-muted-foreground hover:text-primary">
                   Help Center
                 </Link>
               </li>
               <li>
-                <Link href="/shipping" className="text-muted-foreground hover:text-primary">
+                <Link href="/contact" className="text-muted-foreground hover:text-primary">
                   Shipping Info
                 </Link>
               </li>
               <li>
-                <Link href="/returns" className="text-muted-foreground hover:text-primary">
+                <Link href="/contact" className="text-muted-foreground hover:text-primary">
                   Returns
                 </Link>
               </li>
               <li>
-                <Link href="/size-guide" className="text-muted-foreground hover:text-primary">
+                <Link href="/contact" className="text-muted-foreground hover:text-primary">
                   Size Guide
                 </Link>
               </li>

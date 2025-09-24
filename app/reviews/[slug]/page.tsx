@@ -12,7 +12,6 @@ const products = {
   "puppy-starter-kit": {
     name: "Abbylike 50 Pcs Puppy Starter Kit",
     description: "Complete starter kit for small dogs including toys, treats, and essential accessories",
-    price: "$39.99",
     rating: 4.9,
     reviews: 1247,
     category: "Starter Kits",
@@ -46,7 +45,6 @@ const products = {
   "premium-collar-set": {
     name: "Premium Collar & Leash Set",
     description: "Soft padded collar with matching leash, perfect for daily walks and training",
-    price: "$24.99",
     rating: 4.8,
     reviews: 892,
     category: "Collars & Leashes",
@@ -80,7 +78,6 @@ const products = {
   "interactive-toy-bundle": {
     name: "Interactive Toy Bundle",
     description: "Mental stimulation toys designed specifically for small breed intelligence",
-    price: "$29.99",
     rating: 4.7,
     reviews: 634,
     category: "Toys",
@@ -193,8 +190,6 @@ export default async function ProductReviewPage({ params }: PageProps) {
                   </div>
                   <span className="text-muted-foreground">({product.reviews} reviews)</span>
                 </div>
-
-                <div className="text-3xl font-bold text-primary mb-6">{product.price}</div>
 
                 <div className="flex gap-3">
                   <Button size="lg" asChild>
@@ -334,8 +329,7 @@ export default async function ProductReviewPage({ params }: PageProps) {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-primary mb-2">{product.price}</div>
-                    <p className="text-sm text-muted-foreground mb-4">Best price found on Amazon</p>
+                    <p className="text-sm text-muted-foreground mb-4">Available on Amazon</p>
                     <Button className="w-full" size="lg" asChild>
                       <a href={product.amazonUrl} target="_blank" rel="noopener noreferrer">
                         <ExternalLink className="h-4 w-4 mr-2" />
@@ -361,7 +355,6 @@ export default async function ProductReviewPage({ params }: PageProps) {
                       />
                       <div className="flex-1">
                         <h4 className="font-medium text-sm">Premium Collar Set</h4>
-                        <p className="text-xs text-muted-foreground">$24.99</p>
                         <div className="flex items-center">
                           <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
                           <span className="text-xs ml-1">4.8</span>
@@ -376,7 +369,6 @@ export default async function ProductReviewPage({ params }: PageProps) {
                       />
                       <div className="flex-1">
                         <h4 className="font-medium text-sm">Interactive Toys</h4>
-                        <p className="text-xs text-muted-foreground">$29.99</p>
                         <div className="flex items-center">
                           <Star className="h-3 w-3 fill-yellow-400 text-yellow-400" />
                           <span className="text-xs ml-1">4.7</span>

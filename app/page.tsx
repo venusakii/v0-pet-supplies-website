@@ -141,8 +141,7 @@ export default function HomePage() {
                 <CardDescription className="mb-4">
                   Complete starter kit for small dogs including toys, treats, and essential accessories
                 </CardDescription>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">$39.99</span>
+                <div className="flex justify-end">
                   <Button size="sm" asChild>
                     <Link href="/reviews/puppy-starter-kit">View Review</Link>
                   </Button>
@@ -172,8 +171,7 @@ export default function HomePage() {
                 <CardDescription className="mb-4">
                   Soft padded collar with matching leash, perfect for daily walks and training
                 </CardDescription>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">$24.99</span>
+                <div className="flex justify-end">
                   <Button size="sm" asChild>
                     <Link href="/reviews/premium-collar-set">View Review</Link>
                   </Button>
@@ -203,8 +201,7 @@ export default function HomePage() {
                 <CardDescription className="mb-4">
                   Mental stimulation toys designed specifically for small breed intelligence
                 </CardDescription>
-                <div className="flex items-center justify-between">
-                  <span className="text-2xl font-bold text-primary">$29.99</span>
+                <div className="flex justify-end">
                   <Button size="sm" asChild>
                     <Link href="/reviews/interactive-toy-bundle">View Review</Link>
                   </Button>
@@ -247,8 +244,7 @@ export default function HomePage() {
               <CardContent className="pt-0">
                 <h3 className="font-semibold text-sm mb-2">No-Pull Comfort Harness</h3>
                 <p className="text-xs text-muted-foreground mb-3">Gentle training harness</p>
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-primary">$19.99</span>
+                <div className="flex justify-end">
                   <Button size="sm" variant="outline" className="text-xs h-7 bg-transparent">
                     View
                   </Button>
@@ -279,8 +275,7 @@ export default function HomePage() {
               <CardContent className="pt-0">
                 <h3 className="font-semibold text-sm mb-2">Natural Dental Chews</h3>
                 <p className="text-xs text-muted-foreground mb-3">Healthy teeth & breath</p>
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-primary">$14.99</span>
+                <div className="flex justify-end">
                   <Button size="sm" variant="outline" className="text-xs h-7 bg-transparent">
                     View
                   </Button>
@@ -311,8 +306,7 @@ export default function HomePage() {
               <CardContent className="pt-0">
                 <h3 className="font-semibold text-sm mb-2">Waterproof Winter Coat</h3>
                 <p className="text-xs text-muted-foreground mb-3">Warm & stylish protection</p>
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-primary">$32.99</span>
+                <div className="flex justify-end">
                   <Button size="sm" variant="outline" className="text-xs h-7 bg-transparent">
                     View
                   </Button>
@@ -343,8 +337,7 @@ export default function HomePage() {
               <CardContent className="pt-0">
                 <h3 className="font-semibold text-sm mb-2">Slow Feeding Puzzle Bowl</h3>
                 <p className="text-xs text-muted-foreground mb-3">Promotes healthy eating</p>
-                <div className="flex items-center justify-between">
-                  <span className="font-bold text-primary">$16.99</span>
+                <div className="flex justify-end">
                   <Button size="sm" variant="outline" className="text-xs h-7 bg-transparent">
                     View
                   </Button>
@@ -432,8 +425,7 @@ export default function HomePage() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-muted-foreground mb-2">Starting from</p>
-                    <span className="text-2xl font-bold text-primary">$18.99</span>
+                    <p className="text-sm text-muted-foreground mb-2">Winter essentials for your pet</p>
                   </div>
                   <Button asChild>
                     <Link href="/reviews?category=winter">Shop Winter</Link>
@@ -458,8 +450,7 @@ export default function HomePage() {
               <CardContent className="p-6">
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-sm text-muted-foreground mb-2">Starting from</p>
-                    <span className="text-2xl font-bold text-primary">$12.99</span>
+                    <p className="text-sm text-muted-foreground mb-2">Festive toys and accessories</p>
                   </div>
                   <Button asChild>
                     <Link href="/reviews?category=holiday">Shop Holiday</Link>
@@ -628,69 +619,6 @@ export default function HomePage() {
                 <span className="font-bold text-lg">Blue Buffalo</span>
               </div>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="py-20 px-4">
-        <div className="container mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
-            <p className="text-xl text-muted-foreground">Everything you need to know about shopping with us</p>
-          </div>
-
-          <div className="max-w-3xl mx-auto space-y-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">How do you test products?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Every product goes through rigorous testing with real small dogs in various environments. Our team of
-                  veterinarians and professional trainers evaluate safety, durability, and effectiveness before we
-                  recommend any product.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Do you offer returns?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Yes! We offer a 30-day return policy on all products. If your pet doesn't love it, simply return it
-                  for a full refund. We want you and your furry friend to be completely satisfied.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Are your reviews unbiased?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Absolutely. While we participate in affiliate programs, our reviews are completely honest and based on
-                  real testing. We never let partnerships influence our recommendations - your pet's wellbeing comes
-                  first.
-                </p>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">What size dogs do you focus on?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  We specialize in small breeds typically under 25 pounds, including Chihuahuas, Yorkshire Terriers,
-                  Pomeranians, Maltese, and similar sized dogs. All our products are specifically chosen for small dog
-                  needs.
-                </p>
-              </CardContent>
-            </Card>
           </div>
         </div>
       </section>
