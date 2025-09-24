@@ -18,7 +18,6 @@ const products = [
     id: "puppy-starter-kit",
     name: "Abbylike 50 Pcs Puppy Starter Kit",
     description: "Complete starter kit for small dogs including toys, treats, and essential accessories",
-    price: "$39.99",
     rating: 4.9,
     reviews: 1247,
     category: "Starter Kits",
@@ -29,7 +28,6 @@ const products = [
     id: "premium-collar-set",
     name: "Premium Collar & Leash Set",
     description: "Soft padded collar with matching leash, perfect for daily walks and training",
-    price: "$24.99",
     rating: 4.8,
     reviews: 892,
     category: "Collars & Leashes",
@@ -40,7 +38,6 @@ const products = [
     id: "interactive-toy-bundle",
     name: "Interactive Toy Bundle",
     description: "Mental stimulation toys designed specifically for small breed intelligence",
-    price: "$29.99",
     rating: 4.7,
     reviews: 634,
     category: "Toys",
@@ -51,7 +48,6 @@ const products = [
     id: "comfort-harness",
     name: "Ultra-Soft Comfort Harness",
     description: "Breathable mesh harness with padded chest plate for maximum comfort",
-    price: "$19.99",
     rating: 4.6,
     reviews: 445,
     category: "Harnesses",
@@ -62,7 +58,6 @@ const products = [
     id: "dental-chew-set",
     name: "Natural Dental Chew Set",
     description: "Organic dental chews for small breeds to promote healthy teeth and gums",
-    price: "$16.99",
     rating: 4.5,
     reviews: 321,
     category: "Health & Care",
@@ -73,7 +68,6 @@ const products = [
     id: "travel-carrier",
     name: "Airline Approved Travel Carrier",
     description: "Lightweight and secure carrier perfect for small dogs up to 15 lbs",
-    price: "$49.99",
     rating: 4.8,
     reviews: 567,
     category: "Travel",
@@ -84,7 +78,6 @@ const products = [
     id: "winter-coat",
     name: "Waterproof Winter Coat",
     description: "Insulated winter coat with reflective strips for small breed safety",
-    price: "$34.99",
     rating: 4.7,
     reviews: 289,
     category: "Clothing",
@@ -95,7 +88,6 @@ const products = [
     id: "puzzle-feeder",
     name: "Slow Feed Puzzle Bowl",
     description: "Interactive feeding bowl that slows eating and provides mental stimulation",
-    price: "$22.99",
     rating: 4.6,
     reviews: 412,
     category: "Feeding",
@@ -106,7 +98,6 @@ const products = [
     id: "grooming-kit",
     name: "Professional Grooming Kit",
     description: "Complete grooming set with brushes, nail clippers, and cleaning supplies",
-    price: "$27.99",
     rating: 4.4,
     reviews: 198,
     category: "Grooming",
@@ -139,10 +130,6 @@ export default function ReviewsPage() {
           return b.rating - a.rating
         case "reviews":
           return b.reviews - a.reviews
-        case "price-low":
-          return Number.parseFloat(a.price.replace("$", "")) - Number.parseFloat(b.price.replace("$", ""))
-        case "price-high":
-          return Number.parseFloat(b.price.replace("$", "")) - Number.parseFloat(a.price.replace("$", ""))
         case "newest":
           return 0 // For demo purposes, keeping original order
         default:
@@ -223,8 +210,6 @@ export default function ReviewsPage() {
                 <SelectContent>
                   <SelectItem value="rating">Highest Rated</SelectItem>
                   <SelectItem value="reviews">Most Reviews</SelectItem>
-                  <SelectItem value="price-low">Price: Low to High</SelectItem>
-                  <SelectItem value="price-high">Price: High to Low</SelectItem>
                   <SelectItem value="newest">Newest First</SelectItem>
                 </SelectContent>
               </Select>
@@ -281,8 +266,7 @@ export default function ReviewsPage() {
                     <CardDescription className="mb-4 text-sm">{product.description}</CardDescription>
 
                     <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold text-primary">{product.price}</span>
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 ml-auto">
                         <Button size="sm" variant="outline" asChild onClick={(e) => e.stopPropagation()}>
                           <Link href={`/reviews/${product.id}`}>Read Review</Link>
                         </Button>
